@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo ansible-playbook  ~/provisioning/guest/vagrant.yml
+sudo ansible-playbook  ~/.prv/provisioning/guest/vagrant.yml
