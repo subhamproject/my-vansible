@@ -1,0 +1,14 @@
+---
+# handlers file for vagrant
+- name: start docker
+  service: name=docker state=started
+  become: true
+- name: restart docker
+  service: name=docker state=restarted
+  become: true
+- name: start samba
+  service: name=smbd  state=started
+  become: true
+- name: restart samba
+  service: name=smbd  state=restarted
+  become: true
