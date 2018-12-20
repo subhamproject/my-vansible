@@ -5,7 +5,7 @@ find ~/.prv/provisioning/ -type f |xargs dos2unix
 FILE_PERM
 Vagrant.configure("2") do |config|
   # Pull the vagrant box
-  config.vm.box = "reactorcx/rcxdevbox"
+  config.vm.box = "subham/devbox"
   # Set user under which provisioners will run
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
@@ -17,6 +17,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, privileged: false, :inline => ". ~/.prv/provisioning/init.sh"
   config.vm.provision :shell, privileged: false, :inline => ". ~/.prv/provisioning/ansible.sh"
   config.vm.provider "virtualbox" do |vb|
-  vb.name = "rcx-devbox"
+  vb.name = "devbox"
   end
 end
